@@ -12,9 +12,11 @@ int main(int argc, char *argv[])
 
     {
         QCommandLineParser parser;
-        QCommandLineOption outputOption(QStringList() << "o" << "output", "Merge Qt localization TS file.", "file");
+        QCommandLineOption outputOption(QStringList() << "o" << "output", "Merged Qt localization TS file", "file");
+        parser.setApplicationDescription("Merge Utility for Qt Localization TS Files");
+        parser.addHelpOption();
         parser.addOption(outputOption);
-        parser.addPositionalArgument("files", "Source Qt localization TS files.", "[files...]");
+        parser.addPositionalArgument("files", "Source Qt localization TS files", "[files...]");
         parser.process(app);
 
         QStringList filenames = parser.positionalArguments();
