@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/LinguistMerge">
+        <file>icons/add.svg</file>
+        <file>icons/clear.svg</file>
+        <file>icons/remove.svg</file>
+        <file>icons/merge.svg</file>
+    </qresource>
+</RCC>
