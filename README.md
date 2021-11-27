@@ -6,7 +6,7 @@ Merging Qt localization TS files from multiple feature or release branches or re
 
 ## Usage
 
-- Load one or multiple TS files via **Add** or drag and drop into the list view. 
+- Load one or multiple TS files via **Add** or drag and drop TS files into the list view. 
 - Click **Merge** to generate the merged TS file.
 
 ## Compiling from Source
