@@ -13,25 +13,16 @@
   <property name="windowTitle">
    <string>About LinguistMerge</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>2</number>
-     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="m_title">
+      <widget class="QLabel" name="m_labelTitle">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
        </property>
        <property name="text">
         <string>Merge Utility for Qt Localization TS Files</string>
@@ -39,25 +30,38 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="m_link">
+      <widget class="QLabel" name="m_labelVersion">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="text">
-        <string>&lt;a href=&quot;https://github.com/aschet/linguistmerge&quot;&gt;https://github.com/aschet/linguistmerge&lt;/a&gt;</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::RichText</enum>
-       </property>
-       <property name="openExternalLinks">
-        <bool>true</bool>
+        <string/>
        </property>
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="m_labelLink">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>&lt;a href=&quot;https://github.com/aschet/linguistmerge&quot;&gt;https://github.com/aschet/linguistmerge&lt;/a&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="Line" name="m_line">
@@ -67,7 +71,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPlainTextEdit" name="copyright">
+    <widget class="QPlainTextEdit" name="m_editCopyright">
      <property name="readOnly">
       <bool>true</bool>
      </property>

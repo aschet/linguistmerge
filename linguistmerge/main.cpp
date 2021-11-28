@@ -8,6 +8,11 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+
+#ifdef APP_VERSION
+    app.setApplicationVersion(APP_VERSION);
+#endif
+
     MainWindow mainWindow;
 
     {

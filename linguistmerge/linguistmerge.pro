@@ -6,6 +6,10 @@ CONFIG += c++11
 # In order to do so, uncomment the following line.
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+win32:VERSION = 1.0.0.0
+else:VERSION = 1.0.0
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+
 SOURCES += \
     aboutdialog.cpp \
     main.cpp \
