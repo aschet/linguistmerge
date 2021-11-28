@@ -10,6 +10,11 @@ win32:VERSION = 1.0.0.0
 else:VERSION = 1.0.0
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 
+QMAKE_TARGET_COMPANY=Thomas Ascher
+QMAKE_TARGET_DESCRIPTION=Merge Utility for Qt Localization TS Files
+QMAKE_TARGET_COPYRIGHT=Copyright (C) 2021  Thomas Ascher
+QMAKE_TARGET_PRODUCT=LinguistMerge
+
 SOURCES += \
     aboutdialog.cpp \
     main.cpp \
