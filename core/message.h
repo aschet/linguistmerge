@@ -86,8 +86,6 @@ public:
 
     bool isValid() const;
 
-    int getNumberOfTranslated() const;
-
     void merge(const Message &other);
 
 private:

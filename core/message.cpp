@@ -3,6 +3,8 @@
 
 #include "message.h"
 
+#include <algorithm>
+
 Message::Message() = default;
 
 bool Message::operator==(const Message &other) const
@@ -25,46 +27,36 @@ bool Message::isValid() const
     return !m_source.isEmpty();
 }
 
-int Message::getNumberOfTranslated() const
-{
-    int translated = 0;
-    for (const QString & translation : m_translations)
-    {
-        if (!translation.isEmpty())
-            ++translated;
-    }
-    return translated;
-}
-
 void Message::merge(const Message &other)
 {
-    if (other.getType() == Message::Obsolete)
+    if (getType() == Message::Finished)
         return;
 
-    if (getType() == Message::Obsolete)
+    if (other.getType() != Message::Obsolete)
     {
-        operator=(other);
-        return;
+        for (const Location &location : other.locations())
+        {
+            Locations::iterator it = std::find(m_locations.begin(), m_locations.end(), location);
+            if (it == m_locations.end())
+                m_locations.push_back(location);
+        }
+        std::sort(m_locations.begin(), m_locations.end());
     }
 
-    for (const Location &location : other.locations())
-    {
-        Locations::iterator it = std::find(m_locations.begin(), m_locations.end(), location);
-        if (it == m_locations.end())
-            m_locations.push_back(location);
-    }
-    std::sort(m_locations.begin(), m_locations.end());
-
-    int totalTranslations = qMax(m_translations.size(), other.m_translations.size());
-    for (int i = 0; i < totalTranslations; ++i)
+    int maxTranslations = qMax(m_translations.size(), other.m_translations.size());
+    bool translationMerged = false;
+    for (int i = 0; i < maxTranslations; ++i)
     {
         if (m_translations[i].isEmpty())
+        {
             m_translations[i] = other.m_translations[i];
+            translationMerged = true;
+        }
     }
 
-    if (!hasTranslatorComment())
+    if (!hasTranslatorComment() && translationMerged)
         m_translatorComment = other.getTranslatorComment();
 
-    if (getType() == Message::Unfinished && other.getType() == Message::Finished)
-        setType(Message::Finished);
+    if (other.getType() != Message::Obsolete)
+        setType(other.getType());
 }

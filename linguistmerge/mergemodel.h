@@ -4,9 +4,10 @@
 #ifndef MERGEMODEL_H
 #define MERGEMODEL_H
 
-#include <ts.h>
 #include <QtCore/QAbstractItemModel>
+
 #include <QtCore/QStringList>
+#include <ts.h>
 
 class MergeModel : public QAbstractItemModel
 {

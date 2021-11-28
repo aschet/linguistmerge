@@ -1,9 +1,9 @@
 // Copyright 2021 Thomas Ascher
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "mainwindow.h"
-#include <QtWidgets/QApplication>
 #include <QtCore/QCommandLineParser>
+#include <QtWidgets/QApplication>
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {

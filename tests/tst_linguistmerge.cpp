@@ -1,10 +1,11 @@
 // Copyright 2021 Thomas Ascher
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+#include <QtTest>
+
 #include <ts.h>
 #include <tsreader.h>
 #include <tswriter.h>
-#include <QtTest>
 
 class LinguistMergeTest : public QObject
 {

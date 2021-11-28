@@ -4,9 +4,9 @@
 #ifndef TSREADER_H
 #define TSREADER_H
 
-#include "context.h"
-#include <functional>
 #include <QtCore/QXmlStreamReader>
+
+#include "context.h"
 class TS;
 
 class TSReader : public QXmlStreamReader

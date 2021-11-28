@@ -4,8 +4,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <mergemodel.h>
 #include <QtWidgets/QMainWindow>
+
+#include <mergemodel.h>
 
 namespace Ui { class MainWindow; }
 

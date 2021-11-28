@@ -4,7 +4,6 @@
 #ifndef ABOUTDIALOG_H
 #define ABOUTDIALOG_H
 
-#include <limits> // workaround for compilation problems with numeric_limits
 #include <QtWidgets/QDialog>
 
 namespace Ui { class AboutDialog; }

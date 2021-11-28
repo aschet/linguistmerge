@@ -4,7 +4,6 @@
 #ifndef LOCATION_H
 #define LOCATION_H
 
-#include <limits> // workaround for compilation problems with numeric_limits
 #include <QtCore/QString>
 #include <QtCore/QVector>
 

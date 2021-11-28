@@ -6,6 +6,7 @@
 
 #include "context.h"
 #include <QtCore/QMap>
+#include <QtCore/QVector>
 
 typedef QMap<QString, Context> Contexts;
 

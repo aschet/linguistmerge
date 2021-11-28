@@ -4,8 +4,9 @@
 #ifndef TSWRITER_H
 #define TSWRITER_H
 
-#include "message.h"
 #include <QXmlStreamWriter>
+
+#include "message.h"
 class TS;
 
 class TSWriter : public QXmlStreamWriter
