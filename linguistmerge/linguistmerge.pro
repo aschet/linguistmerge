@@ -14,6 +14,7 @@ QMAKE_TARGET_COMPANY=Thomas Ascher
 QMAKE_TARGET_DESCRIPTION=Merge Utility for Qt Localization TS Files
 QMAKE_TARGET_COPYRIGHT=Copyright (C) 2021  Thomas Ascher
 QMAKE_TARGET_PRODUCT=LinguistMerge
+RC_ICONS=linguistmerge.ico
 
 SOURCES += \
     aboutdialog.cpp \
